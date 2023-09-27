@@ -1,0 +1,500 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    max-width: 1410px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+.header {
+    background: #F5EDE7;
+    position: fixed;
+    padding: 12px 0;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    border: 1px  solid black;
+  
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#burger {
+    opacity: 0;
+}
+
+#burger:checked+.menu__btn span {
+    transform: rotate(45deg);
+}
+
+#burger:checked+.menu__btn span::before {
+    top: 0;
+    transform: rotate(0);
+}
+
+#burger:checked+.menu__btn span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+#burger:checked+.menu__btn+.header__navigation {
+    visibility: visible;
+}
+
+.menu__btn {
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+    opacity: 0;
+}
+
+.menu__btn>span,
+.menu__btn>span::before,
+.menu__btn>span::after {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+}
+
+.menu__btn>span {
+    position: relative;
+}
+
+.menu__btn>span::before {
+    position: absolute;
+    content: '';
+    top: -8px;
+}
+
+.menu__btn>span::after {
+    position: absolute;
+    content: '';
+    top: 8px;
+}
+
+.header__navigation {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 90px 0 97px;
+    visibility: hidden;
+
+}
+
+.header__link {
+    font-family: DM Sans;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    color: #FFFFFF;
+    margin-right: 40px;
+}
+@media(max-width:430px) {
+    .container {
+        max-width: 400px
+    }
+
+    .menu__btn {
+        opacity: 1;
+    }
+
+    .header__btn {
+        font-size: 15px;
+        padding: 13px;
+    }
+
+    .header__nav {
+        display: none;
+    }
+
+    .header__links {
+        font-family: 'Open Sans';
+        font-weight: 400;
+        font-size: 20px;
+        margin-bottom: 22px;
+        line-height: 27px;
+        color: #FFFFFF;
+        position: relative;
+    }
+
+    .header__links::after {
+        position: absolute;
+        content: "";
+        width: 144px;
+        height: 1px;
+        background-color: black;
+        top: 32px;
+        left: 0;
+
+    }
+
+    .nav__content {
+        width: 400px;
+        height: 403px;
+        top: 0;
+        left: 15px;
+        position: relative;
+        position: absolute;
+    }
+
+    .header__navigation {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: rgba(14, 35, 40, 0.4);
+        backdrop-filter: blur(7.5px);
+    }}
+.header__link:hover {
+    color: black;
+}
+
+.header__link1 {
+    position: relative;
+}
+
+.header__link1::after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 20px;
+    background-color:black;
+    top: 5px;
+    right: -20px;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+.main{
+    padding-top: 210px;
+    background: #FFC3A0;
+}
+.main__about{
+   
+    padding: 24px 15px;
+    display: flex;
+}
+.main__leftSide{
+    max-width: 444px;
+}
+.main__title{
+    color: #000;
+    font-family: Roboto;
+    font-size: 78px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 90px;
+    padding-top: 50px;
+}
+.main__desc{
+    color: #000;
+font-family: DM Sans;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 28.008px;
+margin-top: 33px;
+}
+.main__rightSide{
+   margin-left: 67px;
+   height: 564px;
+}
+.main__rightSide img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.works{
+    background: #F5EDE7;
+    padding: 80px 0;
+}
+.works__wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.works__card{
+    width: 23%;
+    padding: 0 7px;
+}
+.works__title{
+    color: #000;
+text-align: center;
+font-family: Roboto;
+font-size: 43px;
+font-weight: 400;
+line-height: 60.01px;
+margin-bottom:62px ;
+}
+.works__subtitle{
+    color: #000;
+text-align: center;
+font-family: Roboto;
+font-size: 27px;
+font-weight: 400;
+line-height: 35.996px; 
+text-transform: uppercase;
+margin: 12px 0 3px;
+}
+.works__desc{
+    color: #000;
+text-align: center;
+font-family: DM Sans;
+font-size: 18px;
+font-weight: 400;
+line-height: 28.008px;
+}
+.works__img{
+    padding: 0 117px;
+}
+.works__btn{
+    display: block;
+    margin: 35px auto;
+    padding: 12px 73px;
+    border-radius: 35px;
+    border: 1px solid #0126DE;
+    color: #0126DE;
+font-family: Roboto;
+font-size: 22px;
+font-weight: 400;
+line-height: 34.002px;
+}
+
+
+.about{
+    background: #F5EDE7;  
+}
+.about__wrapper{
+    display: flex;
+    padding: 50px 15px;
+   
+}
+.about__desc p{
+    max-width: 650px;
+    color: #000;
+font-family: Roboto;
+font-size: 40px;
+font-weight: 400;
+line-height: 56.023px;
+padding-top: 40px;
+}
+.about__img{
+    height: 529px;
+    margin-right: 48px;
+}
+.about__img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.about__btn{
+    margin-top: 35px;
+    padding: 12px 73px;
+    border-radius: 35px;
+    border: 1px solid #0126DE;
+    color: #0126DE;
+font-family: Roboto;
+font-size: 22px;
+font-weight: 400;
+line-height: 34.002px;
+}
+
+
+.cards{
+    background: #F5EDE7;
+}
+.cards__wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.cards__card{
+    padding: 25px 25px 22px;
+    border-radius: 20px;
+border: 1px solid #000;
+width: 32%;
+}
+
+
+
+.cards__img{
+    height: 272px;
+
+}
+
+.cards__img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cards__title{
+    color: #000;
+text-align: center;
+font-family: Roboto;
+font-size: 56px;
+font-weight: 400;
+line-height: 68.553px;
+margin-bottom: 15px;
+}
+.cards__desc{
+    color: #000;
+text-align: center;
+font-family: DM Sans;
+font-size: 18px;
+font-weight: 400;
+line-height: 28.008px;
+}
+
+
+.brand{
+    padding: 35px;
+background: #F5EDE7;
+}
+.brand__wrapper{
+    max-width: 1080px;
+    margin: 0 auto;
+}
+.brand__ingredients{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 48px;
+}
+.brand__info{
+    max-width: 511px;
+    
+}
+.brand__ingredients__img{
+    height: 386px;
+   
+}
+.brand__ingredients__title{
+    color: #000;
+font-family: DM Sans;
+font-size: 16px;
+font-weight: 400;
+line-height: 24.003px; 
+text-transform: uppercase;
+    padding-top: 44px;
+    margin-bottom: 26px;
+}
+.brand__desc{
+    color: #000;
+font-family: Roboto;
+font-size: 26px;
+font-weight: 400;
+line-height: 40.005px;
+}
+.brand__bakes__title{
+    color: #000;
+font-family: DM Sans;
+font-size: 16px;
+font-weight: 400;
+line-height: 24.003px; 
+text-transform: uppercase;
+margin-bottom: 26px;
+padding-top: 92px;
+}
+.brand__bakes__img{
+    height: 516px;
+}
+.brand__bakes__img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.brand__bakes{
+    display: flex;
+  justify-content: space-between;
+}
+.footer{
+    background: #F5EDE7;
+}
+.footer__wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 24px;
+}
+
+
+.shop{
+    background: #FFC3A0;
+}
+.shop__wrapper{
+  padding: 100px 0 100px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.shop__card{
+    width: 32%;
+    margin-top: 24px;
+}
+.shop__img{
+    height: 453px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.shop__img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.content{
+    top: 100px;
+    position: absolute;
+}
+.shop__title{
+   
+    margin-top: 12px;
+    color: #000;
+font-family: Roboto;
+font-size: 27px;
+font-weight: 400;
+line-height: 35.996px; 
+text-transform: uppercase;
+}
+.shop__price{
+    color: #000;
+font-family: DM Sans;
+font-size: 20px;
+font-weight: 400;
+line-height: 27.997px;
+text-transform: uppercase;
+margin: 9px 0 15px;
+}
+.shop__btn{
+    padding: 12px 73px;
+    border-radius: 35px;
+    border: 1px solid black;
+    color: black;
+font-family: Roboto;
+font-size: 22px;
+font-weight: 400;
+line-height: 34.002px;
+}
