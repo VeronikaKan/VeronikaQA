@@ -2,7 +2,7 @@ import { BrowserRouter as Router,Routes,Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import Header from "./components/Header";
-import Details from "./pages/Details";
+import Comments from "./pages/Comments";
 import Shop from "./pages/Shop";
 import Footer from "./components/Footer";
 import { useState } from "react";
@@ -32,14 +32,19 @@ if(findedObj[0]){
   setCart(newCart)
   localStorage.setItem('product', JSON.stringify(newCart))
 }
+const removeCart = () =>{
+  setCart([])
+}
+localStorage.setItem("",JSON.stringify([]))
+
   return (
     <>
 <Router>
   <Header/>
   <Routes>
 <Route path="/" element={<Home/>}/>
-<Route path="/Cart" element={<Cart cart = {cart}/>}/>
-<Route path="/Details" element={<Details/>}/>
+<Route path="/Cart" element={<Cart cart = {cart} setCart = {setCart} removeCart = {removeCart}/>}/>
+<Route path="/Comments" element={<Comments/>}/>
 <Route path="/Shop" element={<Shop createElementToBasket ={createElementToBasket} cart = {cart}/>}/>
   </Routes>
 <Footer/>

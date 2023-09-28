@@ -28,7 +28,7 @@ const Shop = ({createElementToBasket,cart}) => {
                             <img src={el.img} />
                         </div>
                         <p className='shop__title'>{el.title}</p>
-                        <p className='shop__price'> {el.price}</p>
+                        <p className='shop__price'> {el.price}$</p>
                         <button onClick={() => handleClick(el)} className='shop__btn'>Add to cart</button>
                     </div>
                   
